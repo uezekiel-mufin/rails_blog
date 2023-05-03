@@ -14,8 +14,8 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
+    <!-- - [Run tests](#run-tests) -->
+    <!-- - [Deployment](#deployment) -->
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -26,29 +26,25 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Rails_Blog] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+**[Rails_Blog]** is a classic example of a blog website. It is a functional website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+   <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -63,11 +59,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Users_Table]**
+- **[Posts_Table]**
+- **[Likes_Table]**
+- **[Comments_Table]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,9 +70,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> No live demo yet
 
-- [Live Demo Link](https://google.com)
+<!-- - [Live Demo Link](https://google.com) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,13 +80,17 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
+
+- Code Editor (VS Studio)
+- Node.js
+- Ruby
+- Ruby On Rails
+- PostgresQL
 
 <!--
 Example command:
@@ -105,43 +104,33 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+git clone https://github.com/Ezzywealth/rails_blog
+
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
-  cd my-project
-  gem install
+  cd rails_blog
+  bundle install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
   rails server
 ```
+
 --->
 
-### Run tests
+<!-- ### Run tests -->
 
-To run tests, run the following command:
+<!-- To run tests, run the following command: -->
 
 <!--
 Example command:
@@ -151,9 +140,9 @@ Example command:
 ```
 --->
 
-### Deployment
+<!-- ### Deployment -->
 
-You can deploy this project using:
+<!-- You can deploy this project using: -->
 
 <!--
 Example:
@@ -163,25 +152,17 @@ Example:
 ```
  -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Ezekiel Udiomuno**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Ezzywealth](https://github.com/Ezzywealth)
+- Twitter: [@EzzyWealth](https://twitter.com/EzzyWealth)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/ezekiel-udiomnuno)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,11 +170,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Model_classes]**
+- [ ] **[Associations]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,9 +189,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project then please do follow me and give a star to this repo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,9 +197,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+I would like to thank Microverse for giving me the opportunity to embark on this project. I would also like to thank everyone who supported me in making this project a reality.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,15 +205,13 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+- **Can I use your code for my project?**
 
-- **[Question_1]**
+  - Alright, you can get understanding from my code. I strongly recommend you to write your own code. It will give you better understanding. Thanks!
 
-  - [Answer_1]
+- **Will you help me to solve my problem in my code?**
 
-- **[Question_2]**
-
-  - [Answer_2]
+  - Yes, It will be my pleasure to help you to solve your problem in your code.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
