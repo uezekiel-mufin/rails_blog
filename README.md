@@ -63,8 +63,6 @@
 - **[Posts_Table]**
 - **[Likes_Table]**
 - **[Comments_Table]**
-- **[Model_classes]**
-- **[Associations]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,8 +170,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[User_Model]**
-- [ ] **[Post_model]**
+- [ ] **[Model_classes]**
+- [ ] **[Associations]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
