@@ -65,6 +65,8 @@
 - **[Comments_Table]**
 - **[Model_classes]**
 - **[Associations]**
+- **[Model_Validations]**
+- **[Rspec]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,8 +174,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[User_Model]**
-- [ ] **[Post_model]**
+- [ ] **[Controllers]**
+- [ ] **[Views]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
