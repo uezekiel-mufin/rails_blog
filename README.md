@@ -102,7 +102,6 @@ Example command:
 ```sh
  gem install rails
 ```
- -->
 
 ### Setup
 
