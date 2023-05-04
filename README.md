@@ -72,9 +72,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-> No live demo yet
+> No live demo yet -->
 
 <!-- - [Live Demo Link](https://google.com) -->
 
