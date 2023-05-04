@@ -2,8 +2,8 @@ require 'faker'
 
 FactoryBot.define do
   factory :comment do
-    title { Faker::Lorem.word }
     body { Faker::Lorem.paragraph }
     author { User.first || association(:user) }
+    post { Post.first || association(:post) }
   end
 end
