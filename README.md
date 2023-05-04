@@ -8,7 +8,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+    <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -65,14 +65,16 @@
 - **[Comments_Table]**
 - **[Model_classes]**
 - **[Associations]**
+- **[Model_Validations]**
+- **[Rspec]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
-> No live demo yet
+> No live demo yet -->
 
 <!-- - [Live Demo Link](https://google.com) -->
 
@@ -100,7 +102,6 @@ Example command:
 ```sh
  gem install rails
 ```
- -->
 
 ### Setup
 
@@ -172,8 +173,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[User_Model]**
-- [ ] **[Post_model]**
+- [ ] **[Controllers]**
+- [ ] **[Views]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,6 +222,6 @@ I would like to thank Microverse for giving me the opportunity to embark on this
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
