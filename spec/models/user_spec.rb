@@ -18,8 +18,6 @@ RSpec.describe User, type: :model do
     it 'requires a name to be present' do
       expect(subject).to validate_presence_of(:name)
     end
-
-
   end
 
   describe '#recent_posts' do
@@ -36,4 +34,3 @@ RSpec.describe User, type: :model do
     end
   end
 end
-

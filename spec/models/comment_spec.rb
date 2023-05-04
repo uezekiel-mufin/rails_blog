@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   let(:author) { FactoryBot.create(:user) }
-  let(:post) { FactoryBot.create(:post, author: author) }
-  let(:subject) { FactoryBot.create(:comment, author: author, post: post) }
+  let(:post) { FactoryBot.create(:post, author:) }
+  let(:subject) { FactoryBot.create(:comment, author:, post:) }
 
   # before do
   #   FactoryBot.create(:comment, author: author, post: post)

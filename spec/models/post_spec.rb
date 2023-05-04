@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   include Shoulda::Matchers::ActiveModel
   let(:author) { FactoryBot.create(:user) }
-  let(:subject) { FactoryBot.create(:post, author: author) }
+  let(:subject) { FactoryBot.create(:post, author:) }
 
   before do
     FactoryBot.create_list(:comment, 7, post: subject)
@@ -46,7 +46,7 @@ RSpec.describe Post, type: :model do
 
   describe '#update_posts_counter' do
     it 'updates the posts_counter of the author' do
-      expect(subject.author.posts_counter ).to eq(1)
+      expect(subject.author.posts_counter).to eq(1)
     end
   end
 end

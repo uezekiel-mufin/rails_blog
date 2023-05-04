@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Like, type: :model do
   let(:author) { FactoryBot.create(:user) }
-  let(:post) { FactoryBot.create(:post, author: author) }
-  let(:subject) { FactoryBot.create(:like, author: author, post: post) }
+  let(:post) { FactoryBot.create(:post, author:) }
+  let(:subject) { FactoryBot.create(:like, author:, post:) }
 
   describe 'Validations' do
     it 'requires a user to be present' do
