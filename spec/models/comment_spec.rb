@@ -5,7 +5,6 @@ RSpec.describe Comment, type: :model do
   let(:post) { FactoryBot.create(:post, author:) }
   let(:subject) { FactoryBot.create(:comment, author:, post:) }
 
-
   describe 'Validations' do
     it 'requires a body to be present' do
       expect(subject.body).to be_truthy

@@ -7,7 +7,6 @@ RSpec.describe User, type: :model do
   let(:subject) { FactoryBot.create(:user) }
   let(:post) { FactoryBot.create(:post, 3, author: subject) }
 
-
   describe 'Validations' do
     it 'requires a name to be present' do
       expect(subject.name).to be_truthy
