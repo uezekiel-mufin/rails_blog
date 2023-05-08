@@ -67,6 +67,9 @@
 - **[Associations]**
 - **[Model_Validations]**
 - **[Rspec]**
+- **[Route]**
+- **[Controllers]**
+- **[Views]**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -173,8 +176,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Controllers]**
-- [ ] **[Views]**
+- [ ] **[UsersControllers_spec]**
+- [ ] **[PostsControllers_spec]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
