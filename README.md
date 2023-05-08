@@ -70,6 +70,8 @@
 - **[Route]**
 - **[Controllers]**
 - **[Views]**
+- **[UsersControllers_spec]**
+- **[PostsControllers_spec]**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -176,8 +178,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[UsersControllers_spec]**
-- [ ] **[PostsControllers_spec]**
+- [ ] **[Users_list_view]**
+- [ ] **[posts_list_view]**
+-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
