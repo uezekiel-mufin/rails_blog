@@ -24,12 +24,14 @@
                 </p>
               </div>
             <% end %>
-            <% if post.comments.count > 0 %>
-              <span class='comments_likes'>
-                  <% post.comments.each do |comment| %>
-                        <%= comment.author.name%>:
-                        <%= comment.body %>
-                      <% end %>
+            <% if post.latest_comments.count > 0 %>
+              <span class='post_comments_likes'>
+                  <% post.latest_comments.each do |comment| %>
+                    <p class='post_comment'>
+                      <%= comment.author.name%>:
+                      <%= comment.body %>
+                    </p>
+                  <% end %>
               </span>
             <% end %>
           </div>

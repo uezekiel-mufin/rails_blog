@@ -17,7 +17,7 @@
     </div>
 
     <div class='posts'>
-      <% @user.posts.take(3).each do |post|%>
+      <% @user.recent_posts.each do |post|%>
       <div class='post'>
         <h4 class='post_title'>
           <%= post.title %>
@@ -26,8 +26,14 @@
           <%= post.body %>
         </p>
         <span class='comments_likes'>
-          <%= post.comments_counter %>
-          <%= post.likes_counter %>
+           <p>
+            Comments:
+            <%= post.comments_counter %>
+          </p>
+           <p>
+            Likes:
+            <%= post.likes_counter %>
+          </p>
         </span>
       </div>
       <% end %>
