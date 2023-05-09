@@ -147,7 +147,7 @@ a {
 }
 
 .flickr_pagination .disabled {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .flickr_pagination .current {
@@ -157,20 +157,20 @@ a {
 }
 
 .flickr_pagination a {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   color: #0063dc;
   text-decoration: none;
 }
 
 .flickr_pagination a:hover,
 .flickr_pagination a:focus {
-  border-color: #003366;
+  border-color: #036;
   background: #0063dc;
   color: white;
 }
 
 .flickr_pagination .page_info {
-  color: #aaaaaa;
+  color: #aaa;
   padding-top: 0.8em;
 }
 
