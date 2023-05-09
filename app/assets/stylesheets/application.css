@@ -87,3 +87,16 @@ a {
 	text-decoration: none;
 	border-radius: 0.2rem;
 }
+
+.posts_comments {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	width: 100%;
+}
+
+.comments_likes {
+	border: 1px solid #523a3a;
+	width: 100%;
+	display: flex;
+}
