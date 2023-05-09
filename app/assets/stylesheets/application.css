@@ -100,3 +100,34 @@ a {
 	width: 100%;
 	display: flex;
 }
+
+/* ************************** Styles for the post for a given id */
+.post_info {
+	border: 1px solid #523a3a;
+}
+
+.post_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.post_comments_likes {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.post_comments {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	border: 1px solid #523a3a;
+	padding: 1rem;
+	margin: 0.5rem 0;
+}
+
+.post_comment {
+	display: flex;
+	margin: 0;
+}
