@@ -17,7 +17,7 @@ RSpec.describe 'PostsControllers', type: :request do
 
     it 'response body includes the correct content' do
       get "/users/#{user.id}/posts"
-      expect(response.body).to match(%r{<h2>List of posts by a given user</h2>})
+      expect(response.body).to match(%r{<h1>List of all Posts by a user</h1>})
     end
   end
 
@@ -34,7 +34,7 @@ RSpec.describe 'PostsControllers', type: :request do
 
     it 'response body includes the correct content' do
       get "/users/#{user.id}/posts/#{post.id}"
-      expect(response.body).to match(%r{<h3>This is the details of a specific post by a given user</h3>})
+      expect(response.body).to match(%r{<h2>Details of post for a given ID</h2>})
     end
   end
 end
