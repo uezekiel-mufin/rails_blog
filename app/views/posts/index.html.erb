@@ -33,6 +33,8 @@
             <% end %>
           </div>
       <% end %>
-      <%= will_paginate @posts %>
+      <div class="flickr_pagination">
+        <%= will_paginate @posts, :container => false %>
+      </div>
   </div>
 </div>
