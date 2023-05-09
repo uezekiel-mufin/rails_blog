@@ -1,1 +1,30 @@
-<h3>This is the details of a specific post by a given user</h3>
+<h2>Details of post for a given ID</h2>
+<div class='post_info'>
+  <div class='post_header'>
+    <h3>Post <%=@post.id%> by <%=@post.author.name%></h3>
+    <span class='comments_likes'>
+      <p>
+        Comments:
+        <%= @post.comments_counter %>
+      </p>
+      <p>
+        Likes:
+        <%= @post.likes_counter %>
+      </p>
+    </span>
+  </div>
+  <p>
+    <%= @post.body%>
+  </p>
+
+</div>
+<% if @post.comments.count > 0 %>
+  <div class='post_comments'>
+    <% @post.comments.each do |comment| %>
+    <p class='post_comment'>
+      <%= comment.author.name%>:
+      <%= comment.body %>
+    </p>
+    <% end %>
+  </div>
+<% end %>

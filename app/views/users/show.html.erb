@@ -1,1 +1,47 @@
 <h2>This is the details of the specific user you selected</h2>
+
+<div>
+   <div class='user_info'>
+    <img src="<%= @user.photo%>" alt="<%= @user.name%>" class='user_image'>
+    <div class='user_details'>
+      <h2>
+        <%= @user.name%>
+      </h2>
+      <h4>
+        <%= @user.posts_counter%>
+      </h4>
+    </div>
+  </div>
+    <div class='user_bio'>
+      <%= @user.bio %>
+    </div>
+
+    <div class='posts'>
+      <% @user.recent_posts.each do |post|%>
+      <div class='post'>
+        <h4 class='post_title'>
+          <%= post.title %>
+        </h4>
+        <p class='post_body'>
+          <%= post.body %>
+        </p>
+        <span class='comments_likes'>
+           <p>
+            Comments:
+            <%= post.comments_counter %>
+          </p>
+           <p>
+            Likes:
+            <%= post.likes_counter %>
+          </p>
+        </span>
+      </div>
+      <% end %>
+      <div class='btn_container'>
+        <%= link_to [@user, :posts] do %>
+          <button class='all_posts_btn'>See all Posts</button>
+        <%end%>
+      </div>
+    </div>
+
+</div>
