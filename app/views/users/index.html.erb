@@ -1,1 +1,17 @@
 <h1>This is the lists of all users in the application</h1>
+
+<% @users.each do |user|%>
+<%= link_to user_path(user.author_id) do %>
+  <div class='user'>
+    <img src="<%= user.photo%>" alt="<%=user.name%>" class='user_image'>
+    <div class='user_details'>
+      <h2>
+        <%= user.name%>
+      </h2>
+      <h4>
+        <%= user.posts_counter%>
+      </h4>
+    </div>
+  </div>
+  <%end%>
+<% end %>
