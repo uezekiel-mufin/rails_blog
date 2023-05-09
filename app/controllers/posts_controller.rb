@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_user, only: %i[index show]
 
-    def index
-      @posts = @user.posts.includes(:comments).paginate(page: params[:page], per_page: 2)
-    end
-
-
+  def index
+    @posts = @user.posts.includes(:comments).paginate(page: params[:page], per_page: 2)
+  end
 
   def show
     @post = @user.posts.find(params[:id])
@@ -16,5 +14,4 @@ class PostsController < ApplicationController
   def set_user
     @user = User.find(params[:user_id])
   end
-
 end
