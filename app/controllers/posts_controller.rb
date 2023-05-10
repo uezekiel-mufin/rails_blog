@@ -9,15 +9,13 @@ class PostsController < ApplicationController
     @posts = @user.posts.paginate(page: params[:page], per_page: 2)
   end
 
-  def new
-
-  end
+  def new; end
 
   def create
     title = params[:title]
     body = params[:body]
     author = current_user
-    @post = Post.new(title: title, body: body, author: author)
+    @post = Post.new(title:, body:, author:)
     if @post.save
       flash[:success] = 'Post created successfully'
       redirect_to user_post_path(@post.author, @post)

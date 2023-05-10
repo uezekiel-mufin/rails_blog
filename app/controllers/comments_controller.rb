@@ -2,8 +2,7 @@ class CommentsController < ApplicationController
   before_action :set_user, only: %i[index show]
   before_action :set_post, only: %i[index show new create edit update destroy]
 
-  def new
-  end
+  def new; end
 
   def index
     @comments = @post.comments.paginate(page: params[:page], per_page: 2)
@@ -15,7 +14,7 @@ class CommentsController < ApplicationController
 
   def create
     body = params[:body]
-    @comment = Comment.new(body: body, post: @post, author: current_user)
+    @comment = Comment.new(body:, post: @post, author: current_user)
     if @comment.save
       flash[:success] = 'Comment created successfully'
       redirect_to user_post_path(@post.author, @post)
@@ -25,11 +24,9 @@ class CommentsController < ApplicationController
     end
   end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 
   private
 
@@ -40,5 +37,4 @@ class CommentsController < ApplicationController
   def set_post
     @post = Post.find(params[:post_id])
   end
-
 end

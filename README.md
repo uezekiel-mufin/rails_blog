@@ -72,6 +72,11 @@
 - **[Views]**
 - **[UsersControllers_spec]**
 - **[PostsControllers_spec]**
+- **[Users_list_view]**
+- **[posts_list_view]**
+- **[Create_post]**
+- **[Create_comment]**
+- **[Like_post]**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -178,8 +183,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Users_list_view]**
-- [ ] **[posts_list_view]**
+- [ ] **[Authentication]**
+- [ ] **[Authorization]**
 -
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
