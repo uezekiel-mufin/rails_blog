@@ -1,20 +1,10 @@
 <h1>List of all Posts by a user</h1>
 <div>
-  <div class='user_info'>
-      <img src="<%= @user.photo%>" alt="<%= @user.name%>" class='user_image'>
-      <div class='user_details'>
-        <h2>
-          <%= @user.name%>
-        </h2>
-        <h4>
-          <%= @user.posts_counter%>
-        </h4>
-      </div>
-  </div>
+  <%= render partial: 'layouts/user', locals: {user: @user} %>
   <div class='posts'>
       <% @posts.each do |post|%>
           <div class='posts_comments'>
-            <%= link_to user_post_path(@user,post) do %>
+            <%= link_to user_post_path(@user, post) do %>
               <div class='post'>
                 <h4 class='post_title'>
                   <%= post.title %>

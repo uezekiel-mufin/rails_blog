@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <% if flash[:success]%>
+      <div class='flash_success'>
+        <%= flash[:success]%>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class='flash_error'>
+        <%= flash[:error]%>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
