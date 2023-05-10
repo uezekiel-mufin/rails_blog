@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-
   def create
     @like = Like.new(author_id: current_user.id, post_id: params[:post_id])
     if @like.save
@@ -9,5 +8,4 @@ class LikesController < ApplicationController
       flash[:alert] = 'Like unsuccessful...'
     end
   end
-
 end
