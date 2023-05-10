@@ -30,5 +30,6 @@
 <% end %>
 <div class='space'>
   <%= link_to 'Back', user_posts_path %>
+  <%= button_to "Like", user_post_likes_path(@post.author.id, post_id: @post.id), method: :post %>
   <%= link_to 'create comment', new_user_post_comment_path(@post.author.id, @post.id) %>
 </div>

@@ -5,7 +5,10 @@
     <div class='user_bio'>
       <%= @user.bio %>
     </div>
-
+  <div class='space'>
+    <%= link_to 'Back', users_path(@user) %>
+    <%= link_to 'Create Post', new_user_post_path(@user) %>
+  </div>
     <div class='posts'>
       <% @user.recent_posts.each do |post|%>
       <div class='post'>
