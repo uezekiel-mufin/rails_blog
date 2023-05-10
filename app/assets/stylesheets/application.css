@@ -144,6 +144,16 @@ a {
   margin: 0;
 }
 
+/* ********** Flash Messages ***************/
+
+.flash_success {
+  background-color: #4caf50;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  z-index: 100;
+}
+
 /* ***********************Pagination styling ************************/
 
 .flickr_pagination {
