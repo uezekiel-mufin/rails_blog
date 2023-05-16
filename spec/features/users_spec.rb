@@ -1,6 +1,7 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature 'Users', type: :feature do
   before(:each) do
     @user1 = FactoryBot.create(:user, name: 'Jacob', photo: 'https://i.pravatar.cc/300?img=1', bio: 'I am Jacob')
     @user2 = FactoryBot.create(:user, name: 'Kelvin', photo: 'https://i.pravatar.cc/300?img=2', bio: 'I am Kelvin')
@@ -9,8 +10,8 @@ RSpec.feature "Users", type: :feature do
     FactoryBot.create(:post, author: @user2)
     FactoryBot.create(:post, author: @user3)
   end
-  describe 'Users Index' do
 
+  describe 'Users Index' do
     scenario 'I can see the usernames of all other users' do
       visit root_path
       expect(page).to have_content(@user1.name)
@@ -78,8 +79,8 @@ RSpec.feature "Users", type: :feature do
     scenario 'When I click on a post, I am taken to that post\'s show page' do
       visit user_posts_path(@user1)
       click_link @user1.posts.first.title
-      expect(page).to have_current_path(user_post_path(@user1, @user1.posts.first ))
+      expect(page).to have_current_path(user_post_path(@user1, @user1.posts.first))
     end
-
   end
 end
+# rubocop:enable Metrics/BlockLength

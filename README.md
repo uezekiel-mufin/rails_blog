@@ -77,6 +77,8 @@
 - **[Create_post]**
 - **[Create_comment]**
 - **[Like_post]**
+- **[Optimize_query]**
+- **[Capybara_test]**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -176,6 +178,12 @@ Example:
 - GitHub: [@Ezzywealth](https://github.com/Ezzywealth)
 - Twitter: [@EzzyWealth](https://twitter.com/EzzyWealth)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ezekiel-udiomnuno)
+
+<!-- 👤 **Fitz Gerald**
+
+- GitHub: [@fitz95](https://github.com/fitz95)
+- Twitter: [@nsonggerald](https://twitter.com/nsonggerald)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/ezekiel-udiomnuno) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
