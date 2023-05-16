@@ -179,11 +179,11 @@ Example:
 - Twitter: [@EzzyWealth](https://twitter.com/EzzyWealth)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ezekiel-udiomnuno)
 
-<!-- 👤 **Fitz Gerald**
+👤 **Fitz Gerald**
 
 - GitHub: [@fitz95](https://github.com/fitz95)
 - Twitter: [@nsonggerald](https://twitter.com/nsonggerald)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/ezekiel-udiomnuno) -->
+- LinkedIn: [LinkedIn](https://linkedin.com/in/ezekiel-udiomnuno)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
