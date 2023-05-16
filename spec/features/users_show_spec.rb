@@ -34,7 +34,7 @@ RSpec.feature 'Users', type: :feature do
 
     scenario 'I can see the user first 3 posts' do
       visit user_path(@user2.id)
-      expect(page).to have_selector(".post", count: 3)
+      expect(page).to have_selector('.post', count: 3)
     end
 
     scenario 'I can see a button that lets me view all of the user\'s posts' do
