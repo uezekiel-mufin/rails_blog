@@ -75,7 +75,6 @@ RSpec.feature 'Users', type: :feature do
       expect(page).to have_current_path(user_posts_path(@user3))
     end
 
-
     scenario 'When I click on a post, I am taken to that post\'s show page' do
       visit user_posts_path(@user1)
       click_link @user1.posts.first.title
