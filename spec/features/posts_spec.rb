@@ -1,5 +1,177 @@
 require 'rails_helper'
 
 RSpec.feature "Posts", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  before(:each) do
+    @user1 = FactoryBot.create(:user, name: 'Jacob', photo: 'https://i.pravatar.cc/300?img=1', bio: 'I am Jacob')
+    @user2 = FactoryBot.create(:user, name: 'Kelvin', photo: 'https://i.pravatar.cc/300?img=2', bio: 'I am Kelvin')
+    @user3 = FactoryBot.create(:user, name: 'Andrew', photo: 'https://i.pravatar.cc/300?img=3', bio: 'I am Andrew')
+    FactoryBot.create(:post, author: @user1)
+    15.times {FactoryBot.create(:post, author: @user2)}
+    FactoryBot.create(:post, author: @user3)
+    FactoryBot.create(:comment, post: @user1.posts.first, author: @user2)
+    FactoryBot.create(:comment, post: @user1.posts.first, author: @user3)
+    FactoryBot.create(:comment, post: @user2.posts.first, author: @user1)
+    FactoryBot.create(:comment, post: @user2.posts.first, author: @user3)
+  end
+  describe 'Posts Index' do
+    scenario 'I can see the user\'s profile picture' do
+      visit user_posts_path(@user1.id)
+      expect(page).to have_selector("img[src='https://i.pravatar.cc/300?img=1']")
+    end
+
+    scenario 'I can see the user\'s name' do
+      visit user_posts_path(@user1.id)
+      expect(page).to have_content(@user1.name)
+    end
+
+    scenario 'I can see the number of posts of the user' do
+      visit user_posts_path(@user1.id)
+      expect(page).to have_content(@user1.posts_counter)
+    end
+
+    scenario 'I can see a post\'s title' do
+      visit user_posts_path(@user1.id)
+      expect(page).to have_content(@user1.posts.first.title)
+    end
+
+    scenario 'I can see a post\'s body' do
+      visit user_posts_path(@user1.id)
+      expect(page).to have_content(@user1.posts.first.body)
+    end
+
+    scenario 'I can see the first comment on a post' do
+      visit user_posts_path(@user1.id)
+      expect(page).to have_content(@user1.posts.first.comments.first.body)
+    end
+
+    scenario 'If i click on a post, it directs me to the post\'s show page' do
+      visit user_posts_path(@user1.id)
+      click_on @user1.posts.first.title
+      expect(page).to have_current_path(user_post_path(@user1.id, @user1.posts.first.id))
+
+    end
+    scenario 'I can see a section for pagination if there are more posts than fit on the view' do
+      visit user_posts_path(@user2)
+      expect(page).to have_selector('div.flickr_pagination a')
+    end
+  end
+
+  describe 'Posts Show' do
+    scenario 'I can see the post title' do
+      visit user_post_path(@user1.id, @user1.posts.first.id)
+      expect(page).to have_content(@user1.posts[0].title)
+    end
+
+    scenario 'I can see who wrote the post' do
+      visit user_post_path(@user1.id, @user1.posts.first.id)
+      expect(page).to have_content(@user1.name)
+    end
+
+    scenario ' I can see how many comments the post has' do
+      visit user_post_path(@user1.id, @user1.posts.first.id)
+      expect(page).to have_content(@user1.posts.first.comments_counter)
+    end
+
+    scenario 'I can see how many likes the post has' do
+      visit user_post_path(@user1.id, @user1.posts.first.id)
+      expect(page).to have_content(@user1.posts.first.likes_counter)
+    end
+
+    scenario 'I can see the username of each commentor' do
+      visit user_post_path(@user1.id, @user1.posts.first.id)
+      expect(page).to have_content(@user2.name)
+      expect(page).to have_content(@user3.name)
+    end
+
+    scenario 'I can see the comment by each commentor' do
+      visit user_post_path(@user1.id, @user1.posts.first.id)
+      expect(page).to have_content(@user2.comments.first.body)
+    end
+  end
+end
+
+require 'rails_helper'
+
+RSpec.feature "Users", type: :feature do
+  before(:each) do
+    @user1 = FactoryBot.create(:user, name: 'Jacob', photo: 'https://i.pravatar.cc/300?img=1', bio: 'I am Jacob')
+    @user2 = FactoryBot.create(:user, name: 'Kelvin', photo: 'https://i.pravatar.cc/300?img=2', bio: 'I am Kelvin')
+    @user3 = FactoryBot.create(:user, name: 'Andrew', photo: 'https://i.pravatar.cc/300?img=3', bio: 'I am Andrew')
+    FactoryBot.create(:post, author: @user1)
+    FactoryBot.create(:post, author: @user2)
+    FactoryBot.create(:post, author: @user3)
+  end
+  describe 'Users Index' do
+
+    scenario 'I can see the usernames of all other users' do
+      visit root_path
+      expect(page).to have_content(@user1.name)
+      expect(page).to have_content(@user2.name)
+      expect(page).to have_content(@user3.name)
+    end
+
+    scenario 'I can see the profile picture of all other users' do
+      visit root_path
+      expect(page).to have_selector("img[src='https://i.pravatar.cc/300?img=1']")
+      expect(page).to have_selector("img[src='https://i.pravatar.cc/300?img=2']")
+      expect(page).to have_selector("img[src='https://i.pravatar.cc/300?img=3']")
+    end
+
+    scenario 'I can see the number of posts of all other users' do
+      visit root_path
+      expect(page).to have_content(@user1.posts_counter)
+      expect(page).to have_content(@user2.posts_counter)
+      expect(page).to have_content(@user3.posts_counter)
+    end
+
+    scenario 'When i click on a username, I am taken to that user\'s profile page' do
+      visit root_path
+      click_link @user1.name
+      sleep(5)
+      expect(current_path).to eq(user_path(@user1.id))
+    end
+  end
+
+  describe 'User show page' do
+    scenario 'I can see the user profile picture' do
+      visit user_path(@user1.id)
+      expect(page).to have_selector("img[src='https://i.pravatar.cc/300?img=1']")
+    end
+
+    scenario 'I can see the user name' do
+      visit user_path(@user1.id)
+      expect(page).to have_content(@user1.name)
+    end
+
+    scenario 'I can see the number of posts of the user' do
+      visit user_path(@user1.id)
+      expect page.has_content?(@user1.posts_counter)
+    end
+
+    scenario 'I can see the user bio' do
+      visit user_path(@user3.id)
+      expect(page).to have_content(@user3.bio)
+    end
+
+    scenario 'I can see a button that lets me view all of the user\'s posts' do
+      visit user_path(@user3.id)
+      expect page.has_link?('See all Posts')
+    end
+
+    scenario 'When I click on the button, I am redirected to the user\'s posts index page' do
+      visit user_path(@user3)
+      within '.btn_container' do
+        click_link 'See all Posts'
+      end
+      expect(page).to have_current_path(user_posts_path(@user3))
+    end
+
+
+    scenario 'When I click on a post, I am taken to that post\'s show page' do
+      visit user_posts_path(@user1)
+      click_link @user1.posts.first.title
+      expect(page).to have_current_path(user_post_path(@user1, @user1.posts.first ))
+    end
+
+  end
 end

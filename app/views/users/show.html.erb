@@ -11,30 +11,35 @@
   </div>
     <div class='posts'>
       <% @user.recent_posts.each do |post|%>
-      <div class='post'>
-        <h4 class='post_title'>
-          <%= post.title %>
-        </h4>
-        <p class='post_body'>
-          <%= post.body %>
-        </p>
-        <span class='comments_likes'>
-           <p>
-            Comments:
-            <%= post.comments_counter %>
-          </p>
-           <p>
-            Likes:
-            <%= post.likes_counter %>
-          </p>
-        </span>
-      </div>
+          <div class='post'>
+            <h4 class='post_title'>
+            <%= link_to user_post_path(@user, post) do %>
+              <%= post.title %>
+            <% end %>
+            </h4>
+            <p class='post_body'>
+              <%= post.body %>
+            </p>
+            <span class='comments_likes'>
+              <p>
+                Comments:
+                <%= post.comments_counter %>
+              </p>
+              <p>
+                Likes:
+                <%= post.likes_counter %>
+              </p>
+            </span>
+          </div>
       <% end %>
+
       <div class='btn_container'>
-        <%= link_to [@user, :posts] do %>
-          <button class='all_posts_btn'>See all Posts</button>
-        <%end%>
+        <%= link_to user_posts_path(@user) do %>
+          See all Posts
+        <% end %>
       </div>
+
+
     </div>
 
 </div>
