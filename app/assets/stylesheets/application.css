@@ -170,6 +170,30 @@ a {
   margin: 1rem;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #523a3a;
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  color: white;
+}
+
+.sign,
+.sign_out,
+.sign_in {
+  color: white;
+  cursor: pointer;
+}
+
+.sign_out {
+  background: none;
+  padding: 0.3rem;
+}
+
 /* ***********************Pagination styling ************************/
 
 .flickr_pagination {
