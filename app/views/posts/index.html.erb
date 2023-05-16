@@ -4,16 +4,26 @@
   <div class='posts'>
       <% @posts.each do |post|%>
           <div class='posts_comments'>
-            <%= link_to user_post_path(@user, post) do %>
               <div class='post'>
+               <%= link_to user_post_path(@user, post) do %>
                 <h4 class='post_title'>
                   <%= post.title %>
                 </h4>
+               <% end %>
                 <p class='post_body'>
                   <%= post.body %>
                 </p>
+               <span class='comments_likes'>
+                  <p>
+                    Comments:
+                    <%= post.comments_counter %>
+                  </p>
+                  <p>
+                    Likes:
+                    <%= post.likes_counter %>
+                  </p>
+              </span>
               </div>
-            <% end %>
             <% if post.latest_comments.count > 0 %>
               <span class='post_comments_likes'>
                   <% post.latest_comments.each do |comment| %>
