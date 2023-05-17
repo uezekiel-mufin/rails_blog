@@ -25,12 +25,19 @@ a {
   gap: 1rem;
   width: 100%;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
-.user_image {
+.img_container {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   border: 1px solid #523a3a;
+  height: 100%;
+  width: 100%;
+}
+
+.user_image {
+  width: 100%;
   height: 100%;
 }
 
