@@ -10,7 +10,7 @@ RSpec.feature 'Posts', type: :feature do
     15.times { FactoryBot.create(:post, author: @user2) }
     FactoryBot.create(:post, author: @user3)
     FactoryBot.create(:comment, post: @user1.posts.first, author: @user2)
-    FactoryBot.create(:comment, post: @user1.posts.first, author: @user3)
+    FactoryBot.create(:comment, post: @user1.posts.first, 11`author: @user3)
     FactoryBot.create(:comment, post: @user2.posts.first, author: @user1)
     FactoryBot.create(:comment, post: @user2.posts.first, author: @user3)
   end
