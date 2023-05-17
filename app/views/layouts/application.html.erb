@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render partial: 'layouts/shared/nav' %>
     <% if flash[:success]%>
       <div class='flash_success'>
         <%= flash[:success]%>
