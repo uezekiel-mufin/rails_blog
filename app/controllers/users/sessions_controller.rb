@@ -9,7 +9,16 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-
+  def create
+    self.resource = warden.authenticate!(auth_options)
+    if resource.confirmed?
+      sign_in(resource_name, resource)
+      respond_with resource, location: after_sign_in_path_for(resource)
+    else
+      flash[:alert] = 'You have to confirm your email address before continuing.'
+      redirect_to new_user_confirmation_path
+    end
+  end
 
   # DELETE /resource/sign_out
   # def destroy
