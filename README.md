@@ -79,6 +79,7 @@
 - **[Like_post]**
 - **[Optimize_query]**
 - **[Capybara_test]**
+- **[Devise_Authentication]**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
