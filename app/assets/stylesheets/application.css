@@ -193,6 +193,38 @@ a {
   padding: 0.3rem;
 }
 
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+.class {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.form_input {
+  width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #523a3a;
+  border-radius: 0.2rem;
+}
+
 /* ***********************Pagination styling ************************/
 
 .flickr_pagination {
