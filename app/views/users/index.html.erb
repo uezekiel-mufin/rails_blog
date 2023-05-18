@@ -13,9 +13,11 @@
         <h4>
           <%= user.posts_counter%>
         </h4>
+        <% if user_signed_in? &&  current_user.role == 'admin' || current_user == user%>
         <div class='delete_user'>
           <%= button_to 'Delete User', user_path(user), method: :delete %>
         </div>
+        <% end %>
       </div>
     </div>
 <% end %>

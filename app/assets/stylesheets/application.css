@@ -26,6 +26,7 @@ a {
   width: 100%;
   align-items: center;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .img_container {
@@ -66,6 +67,19 @@ a {
   right: 0;
 }
 
+.delete_post {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+}
+
 .user_info {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -89,9 +103,15 @@ a {
   width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .post {
   border: 1px solid #523a3a;
   width: 100%;
+  position: relative;
+  padding: 0.3rem;
   box-sizing: border-box;
 }
 
