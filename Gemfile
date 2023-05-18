@@ -52,6 +52,9 @@ gem 'faker', '~> 2.18', '>= 2.18.0'
 # use the devise gem for authentication
 gem 'devise'
 
+# use this gem for authentication with cancancan
+gem 'cancancan'
+
 gem 'will_paginate', '~> 3.3'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
