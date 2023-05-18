@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def destroy
     user = User.find(params[:id])
     if user.destroy
-      flash[:success] = "Successfully created..."
+      flash[:success] = 'Successfully created...'
       redirect_to users_path
     else
       flash.now[:alert] = "Couldn't be deleted"

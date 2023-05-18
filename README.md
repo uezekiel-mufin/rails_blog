@@ -80,6 +80,7 @@
 - **[Optimize_query]**
 - **[Capybara_test]**
 - **[Devise_Authentication]**
+- **[CanCanCan_Authentication]**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -192,8 +193,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Authentication]**
-- [ ] **[Authorization]**
+- [ ] **[Api_endpoints]**
+
 -
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -49,5 +49,4 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:body)
   end
-
 end
