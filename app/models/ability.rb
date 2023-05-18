@@ -13,7 +13,7 @@ class Ability
   #   can :manage, :all
   # end
 
-  can :read, Post
+  can :read, [Post, Comment]
   return unless user.present?
 
   can :manage, [Post, Comment], author_id: user.id

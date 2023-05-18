@@ -1,8 +1,9 @@
 class Api::V1::CommentsController < ActionController::API
   load_and_authorize_resource
+  before_action :set_post, only: %i[index create]
 
   def index
-    @comments = @post.comments.paginate(page: params[:page], per_page: 2)
+    @comments = @post.comments.includes(:author)
     render json: {success: true, data: { comments: @comments } }
   end
 
@@ -23,4 +24,14 @@ class Api::V1::CommentsController < ActionController::API
     params.require(:body)
   end
 
+  def set_post
+    @post = Post.find(params[:post_id])
+
+    raise ActiveRecord::RecordNotFound if @post.nil?
+
+  end
+      # Handle ActiveRecord::RecordNotFound exception
+  rescue_from ActiveRecord::RecordNotFound do
+    render json: { success: false, message: 'Post not found' }, status: :not_found
+  end
   end
