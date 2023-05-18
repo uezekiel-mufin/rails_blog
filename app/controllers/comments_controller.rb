@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   before_action :set_user, only: %i[index show]
   before_action :set_post, only: %i[index show new create edit update destroy]
 
+
   def new; end
 
   def index
@@ -26,7 +27,14 @@ class CommentsController < ApplicationController
 
   def update; end
 
-  def destroy; end
+  def destroy
+    comment = @post.comments.find(params[:id])
+    if comment.destroy
+      flash.now[:success] = 'Comment deleted successfully'
+    else
+      flash.now[:alert] = "Comment couldn't be deleted"
+    end
+  end
 
   private
 
@@ -41,4 +49,5 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:body)
   end
+
 end

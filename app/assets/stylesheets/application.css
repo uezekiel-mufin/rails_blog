@@ -139,6 +139,19 @@ button {
   margin-top: 1rem;
 }
 
+.comment_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #523a3a;
+  width: 100%;
+}
+
+.delete_btn {
+  display: flex;
+  justify-content: end;
+}
+
 .comments_likes {
   display: flex;
   gap: 1rem;

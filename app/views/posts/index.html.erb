@@ -32,10 +32,18 @@
             <% if post.latest_comments.count > 0 %>
               <span class='post_comments_likes'>
                   <% post.latest_comments.each do |comment| %>
+                  <div class='comment_container'>
                     <p class='post_comment'>
                       <%= comment.author.name%>:
                       <%= comment.body %>
                     </p>
+
+                    <p class='delete_btn'>
+                      <% if user_signed_in? &&  (current_user.role == 'admin' || current_user == comment.author) %>
+                        <%= button_to 'Delete', user_post_comment_path(@user, post, comment), method: :delete %>
+                       <% end %>
+                    </p>
+                  </div>
                   <% end %>
               </span>
             <% end %>

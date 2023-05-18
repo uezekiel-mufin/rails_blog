@@ -21,10 +21,17 @@
 <% if @post.comments.count > 0 %>
   <div class='post_comments'>
     <% @post.comments.each do |comment| %>
-    <p class='post_comment'>
-      <%= comment.author.name%>:
-      <%= comment.body %>
-    </p>
+    <div class='comment_container'>
+      <p class='post_comment'>
+        <%= comment.author.name%>:
+        <%= comment.body %>
+      </p>
+      <p class='delete_btn'>
+        <% if user_signed_in? &&  (current_user.role == 'admin' || current_user == comment.author) %>
+          <%= button_to 'Delete', user_post_comment_path(@user, @post, comment), method: :delete %>
+        <% end %>
+      </p>
+    </div>
     <% end %>
   </div>
 <% end %>
