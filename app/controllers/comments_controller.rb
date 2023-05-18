@@ -2,7 +2,6 @@ class CommentsController < ApplicationController
   before_action :set_user, only: %i[index show]
   before_action :set_post, only: %i[index show new create edit update destroy]
 
-
   def new; end
 
   def index
