@@ -26,7 +26,14 @@ class CommentsController < ApplicationController
 
   def update; end
 
-  def destroy; end
+  def destroy
+    comment = @post.comments.find(params[:id])
+    if comment.destroy
+      flash.now[:success] = 'Comment deleted successfully'
+    else
+      flash.now[:alert] = "Comment couldn't be deleted"
+    end
+  end
 
   private
 
