@@ -3,9 +3,15 @@
 
   <h3>
     <% if user_signed_in? %>
-      <p>
-        Hello <%= current_user.role %>
-      </p>
+      <% if current_user.role == 'admin' %>
+        <p>
+          Hello Admin
+        </p>
+      <% else %>
+        <p>
+          Hello <%= current_user.name %>
+        </p>
+      <%end%>
       <%else%>
       <p>
         Hello Guest

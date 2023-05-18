@@ -21,7 +21,7 @@
               <%= post.body %>
             </p>
              <div class='delete_post'>
-                <% if user_signed_in? &&  current_user.role == 'admin' || current_user == post.author%>
+                <% if user_signed_in? &&  (current_user.role == 'admin' || current_user == post.author) %>
                     <%= button_to 'Delete', user_post_path(@user, post.id), method: :delete %>
                 <% end %>
                 </div>

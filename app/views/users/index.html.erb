@@ -2,22 +2,17 @@
 <% @users.each do |user|%>
     <div class='user'>
       <div class='img_container'>
-        <img src="<%= user.photo %>" alt="<%=user.name%>" class='user_image'>
+        <img src="<%= user.photo %>" alt="<%= user.name %>" class='user_image'>
       </div>
       <div class='user_details'>
         <%= link_to user_path(user.id) do %>
         <h2>
-          <%= user.name%>
+          <%= user.name %>
         </h2>
        <%end%>
         <h4>
           <%= user.posts_counter%>
         </h4>
-        <% if user_signed_in? &&  current_user.role == 'admin' || current_user == user%>
-        <div class='delete_user'>
-          <%= button_to 'Delete User', user_path(user), method: :delete %>
-        </div>
-        <% end %>
       </div>
     </div>
 <% end %>
