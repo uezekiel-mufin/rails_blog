@@ -8,4 +8,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     puts @user.recent_posts.inspect
   end
+
+  def destroy
+    user = User.find(params[:id])
+
+    if user.destroy
+      flash[:success] = "Successfully created..."
+      redirect_to users_path
+    else
+      flash.now[:alert] = "Couldn't be deleted"
+    end
+  end
 end
