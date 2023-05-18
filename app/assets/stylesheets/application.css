@@ -80,6 +80,19 @@ a {
   left: 0;
 }
 
+.delete_post_show {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+
 .user_info {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -172,6 +185,7 @@ button {
 /* ************************** Styles for the post for a given id */
 .post_info {
   border: 1px solid #523a3a;
+  position: relative;
 }
 
 .post_header {

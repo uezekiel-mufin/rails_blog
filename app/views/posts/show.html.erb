@@ -12,6 +12,11 @@
         <%= @post.likes_counter %>
       </p>
     </span>
+       <div class='delete_post_show'>
+         <% if user_signed_in? && (can? :destroy, @post) %>
+            <%= button_to 'Delete Post', user_post_path(@user, @post.id), method: :delete %>
+        <% end %>
+      </div>
   </div>
   <p>
     <%= @post.body%>
@@ -27,8 +32,8 @@
         <%= comment.body %>
       </p>
       <p class='delete_btn'>
-        <% if user_signed_in? &&  (current_user.role == 'admin' || current_user == comment.author) %>
-          <%= button_to 'Delete', user_post_comment_path(@user, @post, comment), method: :delete %>
+        <% if user_signed_in? && (can? :destroy, @post) %>
+          <%= button_to 'Delete Comment', user_post_comment_path(@user, @post, comment), method: :delete %>
         <% end %>
       </p>
     </div>
