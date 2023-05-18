@@ -25,17 +25,15 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy
-    post = Post.find(params[:id])
-
-    if post.destroy
-      flash[:success] = 'Post deleted successfully'
-      redirect_to user_posts_path(post.author)
-    else
-      flash.now[:alert] = "Post couldn't be deleted"
-    end
-
-  end
+  # def destroy
+  #   post = Post.find(params[:id])
+  #   if post.destroy
+  #     flash[:success] = 'Post deleted successfully'
+  #     redirect_to user_posts_path(post.author)
+  #   else
+  #     flash.now[:alert] = "Post couldn't be deleted"
+  #   end
+  # end
 
   private
 
