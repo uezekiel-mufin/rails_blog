@@ -4,34 +4,33 @@ class Api::V1::CommentsController < ActionController::API
 
   def index
     @comments = @post.comments.includes(:author)
-    render json: {success: true, data: { comments: @comments } }
+    render json: { success: true, data: { comments: @comments } }
   end
 
   def create
-    body = comment_params
-    @comment = Comment.new(body:, post: @post, author: current_user)
-    if @comment.save
-      flash[:success] = 'Comment created successfully'
-      redirect_to user_post_path(@post.author, @post)
+    post = Post.find(params[:post_id])
+    comment = post.comments.build(comment_params)
+    comment.author = current_user
+    if comment.save
+      render json: { success: true, data: { comment: } }
     else
-      flash[:alert] = "Comment couldn't be created"
-      render 'new'
+      render json: { success: false, errors: comment.errors.full_messages }
     end
   end
 
   private
+
   def comment_params
     params.require(:body)
   end
 
   def set_post
     @post = Post.find(params[:post_id])
-
     raise ActiveRecord::RecordNotFound if @post.nil?
-
   end
-      # Handle ActiveRecord::RecordNotFound exception
+
+  # Handle ActiveRecord::RecordNotFound exception
   rescue_from ActiveRecord::RecordNotFound do
     render json: { success: false, message: 'Post not found' }, status: :not_found
   end
-  end
+end
